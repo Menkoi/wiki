@@ -1,0 +1,15 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+{{ name }}
+{% endblock %}
+
+{% block body %}
+    <h1>{{ name }}</h1>
+    <a href="{{name}}/edit" role="button">Edit</a> 
+    <p></p>
+    {% for entry in entries %}
+        {{ entry }} 
+    {% endfor %} 
+    
+{% endblock %}
